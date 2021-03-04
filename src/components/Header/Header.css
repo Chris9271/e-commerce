@@ -1,0 +1,71 @@
+.head-img{
+    width: 200px;
+    height: 65px;
+}
+
+.btn{
+    background-color: lightslategrey;
+}
+
+.btn:hover{
+    background-color: lightsteelblue;
+}
+
+/*-- Responsive Area --*/
+@media screen and (max-width: 670px){
+    .head-img{
+        width: 150px;
+    }
+
+    .right-container{
+        padding-right: 0px !important;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .head-img{
+        width: 200px;
+        height: 40px !important;
+        margin-left: 1rem;
+    }
+
+    .target5{
+        visibility: hidden;
+        position: absolute;
+    }
+
+    .nav-wrapper{
+        height: 65px !important;
+        position: relative;
+        margin-bottom: 3rem;
+    }
+
+    .target1{
+        position: absolute;
+        top: 80%;
+        left: 15%;
+        transform: translate(-50%, -50%);
+    }
+
+    .target2{
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .target3{
+        position: absolute;
+        top: 80%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+
+    .target4{
+        position: absolute;
+        top: 30%;
+        left: 85%;
+        transform: translate(-50%, -50%);
+    }
+}
+

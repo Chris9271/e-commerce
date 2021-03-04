@@ -1,0 +1,172 @@
+.cart-wrapper{
+    margin: 1.5rem 0;
+    padding: 1.5rem 0;
+}
+
+.item-name{
+    border-bottom: 1px solid black;
+}
+
+.item-names{
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+.item-image{
+    width: 10rem;
+    height: 10rem;
+    margin: 1.5rem 0.5rem;
+}
+
+.item-detail{
+    display: flex;
+}
+
+.des-detail{
+    display: block;
+    margin: 0.5rem 0;
+    
+}
+
+.item-quantity{
+    display: flex;
+    margin-top: 1rem;
+}
+
+/* .error-msg{
+    display: inline-block;
+} */
+
+.minus,
+.plus{
+    border: none;
+    font-size: 1.5rem;
+    background: transparent;
+}
+
+.item-amount{
+    border: 1px solid lightslategray !important;
+    margin-top: 0.8rem !important;
+    padding: 5px !important;
+    width: 20px !important;
+    height: 20px !important; 
+    text-align: center;
+}
+
+.item-remove{
+    border: none;
+    font-size: 1rem;
+    margin-top: 1.5rem;
+    background: transparent;
+}
+
+.show-price{
+    margin-top: 1rem;
+}
+
+button:focus{
+    background-color: white;
+}
+
+
+/*-- Responsive Area --*/
+@media screen and (max-width: 570px){
+    .item-quantity{
+        position: absolute;
+        top: 78%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        margin-top: 0.2rem;
+    }
+
+    .item-remove{
+        position: absolute;
+        top: 6%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .show-price{
+        position: absolute;
+        top: 73%;
+        left: 90%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title{
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .item-quantity{
+        left: 45%;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .button-option{
+        width: 80%;
+    }
+
+    .item-quantity{
+        left: 55%;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .item-quantity{
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .item-image{
+        margin: 1.5rem 0.5rem;
+        width: 125px;
+        height: 150px;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .button-option{
+        width: 70%;
+    }
+
+    .product-name{
+        margin-bottom: 0.2rem;
+    }
+
+    .item-quantity{
+        left: 64%;
+    }
+
+    .item-remove{
+        left: 95%;
+    }
+
+    .show-price{
+        left: 93%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .button-option{
+        width: 50%;
+    }
+
+    .minus,
+    .plus{
+        margin: 0.1rem;
+        padding: 0.6rem;
+    } 
+
+    .item-quantity{
+        left: 75%;
+    }
+
+    .show-price{
+        top: 50%;
+    }
+}

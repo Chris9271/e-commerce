@@ -1,0 +1,89 @@
+.mobileStyle{
+    width: 1000px;
+    height: 600px;
+}
+
+/*-- Responsive Area --*/
+@media screen and (max-width: 1024px){
+    .mobileStyle{
+        width: 50rem;
+        height: 38rem;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .mobileStyle{
+        width: 50rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 770px){
+    .mobileStyle{
+        width: 48rem;
+        height: 48rem;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .mobileStyle{
+        width: 45rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .mobileStyle{
+        width: 39rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .mobileStyle{
+        width: 37rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .mobileStyle{
+        width: 35rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .mobileStyle{
+        width: 26.5rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .mobileStyle{
+        width: 24.5rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .mobileStyle{
+        width: 23.5rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .mobileStyle{
+        width: 20.5rem;
+        height: 35rem;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .mobileStyle{
+        width: 18rem;
+        height: 35rem;
+    }
+}

@@ -1,0 +1,239 @@
+.men-image,
+.women-image{
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+img:hover{
+    opacity: 0.8;
+}
+
+.wrap-picture{
+    margin: 5.3rem auto;
+}
+
+.shopmen,
+.shopwomen{
+    position: relative;
+    text-align: center;
+}
+
+.men{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+}
+
+.menbtn1{
+    position: absolute;
+    top: 63%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menbtn2{
+    position: absolute;
+    top: 63%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.women{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 3rem;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100%;
+}
+
+.womenbtn1{
+    position: absolute;
+    top: 63%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.womenbtn2{
+    position: absolute;
+    top: 63%;
+    left: 61%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.menbtn1:hover, 
+.menbtn2:hover,
+.womenbtn1:hover,
+.womenbtn2:hover{
+    background-color: black;
+    color: white
+}
+
+
+/*-- Responsive Area --*/
+@media screen and (max-width: 1366px){
+    .men{
+        font-size: 2.5rem;
+    }
+
+    .menbtn1{
+        left: 33%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .menbtn2{
+        left: 63%;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .women{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.3rem;
+        width: 100%;
+    }
+
+    .womenbtn1{
+        top: 63%;
+        left: 33%;
+        transform: translate(-50%, -50%);
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+
+    .womenbtn2{
+        top: 63%;
+        left: 63%;
+        transform: translate(-50%, -50%);
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 992px){
+    .men,
+    .women{
+        font-size: 3rem;
+    }
+
+    .menbtn1,
+    .menbtn2,
+    .womenbtn1,
+    .womenbtn2{
+        padding: 0.75rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .women{
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .men{
+        font-size: 2.5rem;
+    }
+
+    .menbtn1,
+    .menbtn2,
+    .womenbtn1,
+    .womenbtn2{
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .men{
+        font-size: 2rem;
+    }
+
+    .menbtn1,
+    .menbtn2,
+    .womenbtn1,
+    .womenbtn2{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+
+    .women{
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .men,
+    .women{
+        font-size: 1.6rem;
+    }
+
+    .menbtn1,
+    .menbtn2,
+    .womenbtn1,
+    .womenbtn2{
+        padding: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .wrap-picture{
+        margin: 2rem 0;
+    }
+
+    .shopmen,
+    .shopwomen{
+        margin: 1rem 0;
+    }
+
+    .menbtn1,
+    .menbtn2,
+    .womenbtn1,
+    .womenbtn2{
+        font-size: 0.6rem;
+    }
+
+    .women{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .men,
+    .women{
+        font-size: 1.3rem;
+    }
+}

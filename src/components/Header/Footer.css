@@ -1,0 +1,22 @@
+.foot-img{
+    width: 200px;
+    height: 65px;
+    margin: 1rem 0;
+}
+
+li{
+    padding: 0.1rem;
+}
+
+.row{
+    margin-bottom: 0;
+}
+
+/*-- Responsive Area --*/
+
+@media screen and (max-width: 992px) {
+    .foot-img{
+        visibility: hidden;
+        position: absolute;
+    }
+}
