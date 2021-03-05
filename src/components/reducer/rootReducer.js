@@ -1,5 +1,6 @@
 import {Products, Location, Cart} from '../../data';
 
+
 const initState = {
     Products,
     Location,

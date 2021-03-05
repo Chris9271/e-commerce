@@ -1,9 +1,32 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
 import './Cart.css';
 
 const Cart = ({cart, increase, decrease, removeItem}) => {
-    console.log(cart)
+
+    const [cartTotal, setCartTotal] = useState(0);
+    const [quantity, setQuantity] = useState();
+
+    const total = () => {
+        let totalPrice = 0;
+        for(let i = 0; i < cart.length; i++){
+            if(cart.length > 0){
+                totalPrice = totalPrice + Number(cart[i].price);
+                    if(cart.length > 0 && cart[i].quantity > 1){
+                        totalPrice = totalPrice + Number(cart[i].price * quantity);
+                    }
+                // console.log(Number(cart[i].price))
+                // console.log(cart[i])
+            }
+            setCartTotal(totalPrice);
+        }
+    }
+
+        useEffect(() => {
+            total();
+        }, [cart])
+    
+
     if(cart.length === 0){
         return(
             <div className="row container center">
@@ -11,16 +34,21 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             </div>
         )
     }
-    
+
     let itemList = cart.map(item => {
 
         const handleMinusClick = (e) => {
             e.preventDefault();
             decrease(item.id);
+            setQuantity(item.quantity)
+            console.log(quantity)
         }
+
         const handleAddClick = (e) => {
             e.preventDefault();
             increase(item.id);
+            setQuantity(item.quantity)
+            console.log(quantity)
         }
     
         const handleRemoveClick = (e) => {
@@ -30,7 +58,6 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
 
     return (
         <div className="row container item-names" key={item.id}>
-            
             <div className="col s12 m5 item-detail">
                 <img src={item.image} alt={item.productName} className="item-image"/>
                 <div className="des-detail">
@@ -67,7 +94,6 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             </div>
         </div>
     )})
-            
 
     return(
         <div className="cart-wrapper">
@@ -89,10 +115,15 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             </div>
                 {itemList} 
                 <div className="row">
-                    <div className="col s8"></div>
-                    <div className="col s4">
-                        <p>Item Total: $ </p>
+                    <div className="col s7"></div>
+                    <div className="col s2">
+                        <p>Item Total:</p>
                     </div>
+                    <div className="col s1">
+                    {/* Should fix - if each item quantity > 1, total price won't change */}
+                        <p>${cartTotal.toFixed(2).toString()} </p>
+                    </div>
+                    <div className="col s1"></div>
                 </div> 
         </div> 
     )
