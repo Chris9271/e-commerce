@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Modal from 'react-modal';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import Footer from '../Header/Footer';
 import './SingleItem.css';
 
 const customStyles = {
@@ -34,7 +35,6 @@ const SingleItem = ({checkItem, addCart}) => {
 
     const handleAddClick = () => {
         addCart(checkItem[0])
-        console.log(checkItem)
     }
 
     let oneItem = checkItem.map(item => {
@@ -60,7 +60,7 @@ const SingleItem = ({checkItem, addCart}) => {
                     <hr/>
                     <p onClick={openModalHandler} className="size-chart"><i className="material-icons">straighten</i>Size Chart</p>
                     <Link to="/cart">
-                        <button className="cart-Btn" onClick={handleAddClick}>ADD TO CART</button>
+                        <button className="cart-Btn" onClick={()=>handleAddClick()}>ADD TO CART</button>
                     </Link>
                 </div>
             </div>
@@ -80,16 +80,21 @@ const SingleItem = ({checkItem, addCart}) => {
     })
 
     return (
+        <>
         <div className="container">
-            {oneItem}
+            <div className="singleItem">
+                {oneItem}
+            </div>
         </div>
+            <Footer/>
+        </>
     )
 }
 
 const mapStateToProps = (state, ownProps) => {
     const productId = ownProps.match.params.pid;
     return{
-        checkItem: state.Products.filter(list => list.id === +productId)
+        checkItem: state.cart.Products.filter(list => list.id === +productId)
     }
 }
 

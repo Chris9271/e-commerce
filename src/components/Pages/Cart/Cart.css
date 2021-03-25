@@ -1,6 +1,11 @@
 .cart-wrapper{
-    margin: 1.5rem 0;
-    padding: 1.5rem 0;
+    margin: 2.5rem 0;
+    padding: 2.5rem 0;
+}
+
+.emptyCart{
+    margin-top: 5.5rem;
+    padding-top: 5.5rem;
 }
 
 .item-name{
@@ -25,7 +30,6 @@
 .des-detail{
     display: block;
     margin: 0.5rem 0;
-    
 }
 
 .item-quantity{
@@ -33,12 +37,13 @@
     margin-top: 1rem;
 }
 
-/* .error-msg{
-    display: inline-block;
-} */
-
 .minus,
 .plus{
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    /* background-color: white;
+    border: 1px solid lightgrey; */
     border: none;
     font-size: 1.5rem;
     background: transparent;
@@ -65,7 +70,11 @@
 }
 
 button:focus{
-    background-color: white;
+    background-color: rgba(255,255,255, 0);
+}
+
+.button-option{
+    width: 8rem;
 }
 
 
@@ -107,17 +116,33 @@ button:focus{
 
 @media screen and (max-width: 420px){
     .button-option{
-        width: 80%;
+        width: 7rem;
     }
 
     .item-quantity{
-        left: 55%;
+        left: 58%;
+    }
+
+    .item-remove{
+        left: 95%;
     }
 }
 
 @media screen and (max-width: 380px){
+    .product-name{
+        margin: 0.5rem 0 0.2rem 0;
+    }
+
+    .button-option{
+        width: 5rem;
+    }
+
     .item-quantity{
-        left: 60%;
+        left: 63%;
+    }
+
+    .item-remove{
+        left: 95%;
     }
 }
 
@@ -127,26 +152,23 @@ button:focus{
         width: 125px;
         height: 150px;
     }
+
+    .item-quantity{
+        left: 62%;
+    }
 }
 
 @media screen and (max-width: 320px){
-    .button-option{
-        width: 70%;
-    }
-
     .product-name{
         margin-bottom: 0.2rem;
     }
 
     .item-quantity{
-        left: 64%;
-    }
-
-    .item-remove{
-        left: 95%;
+        left: 68%;
     }
 
     .show-price{
+        top: 85%;
         left: 93%;
     }
 }

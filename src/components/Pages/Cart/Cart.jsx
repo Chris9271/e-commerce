@@ -5,18 +5,12 @@ import './Cart.css';
 const Cart = ({cart, increase, decrease, removeItem}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
-    const [quantity, setQuantity] = useState();
 
     const total = () => {
         let totalPrice = 0;
         for(let i = 0; i < cart.length; i++){
-            if(cart.length > 0){
-                totalPrice = totalPrice + Number(cart[i].price);
-                    if(cart.length > 0 && cart[i].quantity > 1){
-                        totalPrice = totalPrice + Number(cart[i].price * quantity);
-                    }
-                // console.log(Number(cart[i].price))
-                // console.log(cart[i])
+            if(cart.length > 0 && cart[i].quantity >= 1){
+                totalPrice += Number(cart[i].price * cart[i].quantity);
             }
             setCartTotal(totalPrice);
         }
@@ -29,7 +23,7 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
 
     if(cart.length === 0){
         return(
-            <div className="row container center">
+            <div className="row container center emptyCart">
                 <h5>You currently have no items in your shopping cart.</h5>
             </div>
         )
@@ -40,20 +34,20 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
         const handleMinusClick = (e) => {
             e.preventDefault();
             decrease(item.id);
-            setQuantity(item.quantity)
-            console.log(quantity)
         }
 
         const handleAddClick = (e) => {
             e.preventDefault();
             increase(item.id);
-            setQuantity(item.quantity)
-            console.log(quantity)
         }
     
         const handleRemoveClick = (e) => {
             e.preventDefault();
             removeItem(item.id);
+        }
+
+        const handleChange = () => {
+            item.quantity += 1
         }
 
     return (
@@ -77,7 +71,7 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
                     :
                     <button className="minus" onClick={handleMinusClick}>-</button>
                 }
-                <input type="text" min="1" max="10" value={item.quantity} className="item-amount"/>
+                <input type="text" min="1" max="10" value={item.quantity} className="item-amount" readOnly/>
                 {(item.quantity >= 10) ?
                     <button className="plus" onClick={handleAddClick} disabled>+</button>
                     :
@@ -86,7 +80,7 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             </div>
             <div className="col m1"></div>
             <div className="col m1 show-price">
-                <p>${item.totalPrice.toFixed(2).toString()}</p>
+                <p>${(item.quantity === 1) ? Number(item.price).toFixed(2).toString() : (item.quantity * Number(item.price)).toFixed(2).toString()}</p>
             </div>
             <div className="col m1"></div>
             <div className="col m1">
@@ -115,15 +109,14 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             </div>
                 {itemList} 
                 <div className="row">
-                    <div className="col s7"></div>
-                    <div className="col s2">
+                    <div className="col s5 m7"></div>
+                    <div className="col s4 m2">
                         <p>Item Total:</p>
                     </div>
-                    <div className="col s1">
-                    {/* Should fix - if each item quantity > 1, total price won't change */}
+                    <div className="col s1 m1">
                         <p>${cartTotal.toFixed(2).toString()} </p>
                     </div>
-                    <div className="col s1"></div>
+                    <div className="col s1 m1"></div>
                 </div> 
         </div> 
     )
@@ -131,7 +124,7 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
 
 const mapStateToProps = (state) => {
     return{
-        cart: state.Cart
+        cart: state.cart.Cart
     }
 }
 

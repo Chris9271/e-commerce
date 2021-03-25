@@ -1,6 +1,7 @@
 import React from 'react';
-import Map from './Map';
 import {connect} from 'react-redux';
+import Map from './Map';
+import Footer from '../../Header/Footer';
 import './Location.css';
 
 const Location = ({headStore}) => {
@@ -30,16 +31,19 @@ const Location = ({headStore}) => {
     })
     
     return (
+        <>
         <div className="container location-map">
             <Map LatNLng={headStore}/>
             {showStore}
-        </div>
+        </div>  
+            <Footer/>
+        </>
     )
 }
 
 const mapStateToProps = (state) => {
     return{
-        headStore: state.Location
+        headStore: state.cart.Location
     }
 }
 

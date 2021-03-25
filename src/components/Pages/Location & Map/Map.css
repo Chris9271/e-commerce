@@ -4,7 +4,7 @@
 }
 
 /*-- Responsive Area --*/
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1200px){
     .mobileStyle{
         width: 50rem;
         height: 38rem;

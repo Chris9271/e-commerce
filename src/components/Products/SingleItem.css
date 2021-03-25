@@ -1,3 +1,8 @@
+.singleItem{
+    margin: 2.5rem auto;
+    padding-top: 3.5rem;
+}
+
 .itemImg{
     width: 100%;
     margin: 1.5rem auto;
@@ -10,19 +15,6 @@
 
 .descript{
     margin: 1.5rem 0;
-}
-
-button{
-    margin: 0.5rem;
-    padding: 0.5rem 0.8rem;
-    font-size: 1rem;
-    background-color: white;
-    border: 1px solid lightgrey;
-}
-
-button:active{
-    background-color: black;
-    color: white;
 }
 
 .cart-Btn{

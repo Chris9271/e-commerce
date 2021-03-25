@@ -12,8 +12,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "men",
-        quantity: 1,
-        totalPrice: 39.90
+        quantity: 1
     },
     {
         id: 2,
@@ -28,8 +27,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "men",
-        quantity: 1,
-        totalPrice: 149.90
+        quantity: 1
     },
     {
         id: 3,
@@ -44,8 +42,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "men",
-        quantity: 1,
-        totalPrice: 37.99
+        quantity: 1
     },
     {
         id: 4,
@@ -60,8 +57,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "men",
-        quantity: 1,
-        totalPrice: 56.21
+        quantity: 1
     },
     {
         id: 5,
@@ -76,8 +72,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "women",
-        quantity: 1,
-        totalPrice: 49.99
+        quantity: 1
     },
     {
         id: 6,
@@ -92,12 +87,11 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "women",
-        quantity: 1,
-        totalPrice: 39.90
+        quantity: 1
     },
     {
         id: 7,
-        productName: "Kids Short Sleeve Graphic T-Shirt (PEANUTS X YU NAGABA)",
+        productName: "Short Sleeve Graphic T-Shirt",
         image: "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/435631/item/goods_40_435631.jpg?width=1600&impolicy=quality_75",
         hoverImage: "https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/435631/sub/goods_435631_sub13.jpg?width=1600&impolicy=quality_75",
         price: "14.90",
@@ -108,8 +102,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "women",
-        quantity: 1,
-        totalPrice: 14.90
+        quantity: 1
     },
     {
         id: 8,
@@ -124,8 +117,7 @@ export const Products = [
             warning: "KEEP AWAY FROM FIRE. NO OPTICAL BRIGHTENERS. DO NOT SOAK. USE PRESS CLOTH. DO NOT IRON PRINTED PART. DO NOT IRON DECORATION. SHEDDING OF FLUFF MAY OCCUR. USE A FABRIC BRUSH TO GENTLY COMB AND REMOVE EXCESS HAIRS."
         },
         gender: "women",
-        quantity: 1,
-        totalPrice: 89.00
+        quantity: 1
     }
 ]
 

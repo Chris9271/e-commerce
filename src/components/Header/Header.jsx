@@ -1,8 +1,10 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {userSignOut} from '../Pages/SignIn & SignUp/authAction';
 import './Header.css';
 
-const Header = () => {
+const Header = ({status, userLogout}) => {
     return (
     <nav>
         <div className="nav-wrapper grey darken-1">
@@ -14,11 +16,15 @@ const Header = () => {
                 </div>
                 <div className="col s12 right-container">   
                     <ul className="right">
-                        <li className="target1"><NavLink to="/men">Mens</NavLink></li>
-                        <li className="target2"><NavLink to="/women">Womens</NavLink></li>
-                        <li className="target3"><NavLink to="/location">Location</NavLink></li>
-                        <li className="target4"><NavLink to="/cart"><i className="material-icons">shopping_cart</i></NavLink></li>
-                        <li className="target5"><a className="waves-effect wave-light btn"><i className="material-icons left">person</i>SignUp</a></li>
+                        <li className="target1"><NavLink to="/men" className="hoverLink-bg">Mens</NavLink></li>
+                        <li className="target2"><NavLink to="/women" className="hoverLink-bg">Womens</NavLink></li>
+                        <li className="target3"><NavLink to="/location" className="hoverLink-bg">Location</NavLink></li>
+                        <li className="target4"><NavLink to="/cart" className="hoverLink-bg"><i className="material-icons">shopping_cart</i></NavLink></li>
+                        {!status.auth.uid ?
+                        <li className="target5"><NavLink to="/signup" className="hoverLink-bg"><i className="material-icons left">account_circle</i></NavLink></li>
+                        :
+                        <li className="target5"><NavLink to="/" className="logout hoverLink-bg"><img src="./sign-out.png" alt="user-logout" className="log-out" onClick={() => userLogout()}/></NavLink></li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -27,4 +33,16 @@ const Header = () => {
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return{
+        status: state.firebase
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return{
+        userLogout: () => dispatch(userSignOut())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);
