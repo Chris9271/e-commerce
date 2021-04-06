@@ -9,7 +9,7 @@ const Men = ({filteredMen}) => {
     // const filteredMen = Products.filter(list => list.gender === path);
     return (
         <>
-        <div className="container men-products">
+        <div className="men-products">
             <ProductList items={filteredMen}/>
         </div>
             <Footer/>

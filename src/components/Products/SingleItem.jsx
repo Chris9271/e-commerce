@@ -13,7 +13,7 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        height: '800px',
+        height: '700px',
         overflow: 'scroll'
     }
 };
@@ -23,7 +23,8 @@ const SingleItem = ({checkItem, addCart}) => {
     //檢查id是否與路徑pid相同
     // const productId = props.match.params.pid;
     // const checkItem = Products.filter(item => item.id === +productId);
-    const [openModal, setOpenModal] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+    const [switchPic, setSwitchPic] = useState(false);
 
     const openModalHandler = () => {
         setOpenModal(true)
@@ -37,6 +38,14 @@ const SingleItem = ({checkItem, addCart}) => {
         addCart(checkItem[0])
     }
 
+    const handleLeftClick = () => {
+        setSwitchPic(!switchPic)
+    }
+
+    const handleRightClick = () => {
+        setSwitchPic(!switchPic)
+    }
+
     let oneItem = checkItem.map(item => {
         return(
             <div key={item.id}>
@@ -48,12 +57,18 @@ const SingleItem = ({checkItem, addCart}) => {
                 <img src="https://cdn.shopify.com/s/files/1/1380/3157/files/168293_original_1-2_2048x2048.png?v=1474813445" alt="" className="size-image"/>
             </Modal>
 
-            <div className="content-container" key={item.id}>
+            <div className="content" key={item.id}>
             <div className="row">
-                <div className="col s12 m7">
+                <div className="col s12 m7 product-image">
+                    {(!switchPic) ? 
                     <img src={item.image} alt="" className="itemImg"/>
+                    :
+                    <img src={item.hoverImage} alt="" className="itemImg"/>
+                    }
+                    <i class="material-icons left-icon" onClick={handleLeftClick}>keyboard_arrow_left</i>
+                    <i class="material-icons right-icon" onClick={handleRightClick}>keyboard_arrow_right</i>
                 </div>
-                <div className="col s12 m5 content">
+                <div className="col s12 m5 content-detail">
                     <h5>{item.productName}</h5>
                     <h6>CAD ${item.price}</h6>
                     <p className="descript">{item.description}</p>
@@ -81,12 +96,12 @@ const SingleItem = ({checkItem, addCart}) => {
 
     return (
         <>
-        <div className="container">
+        <div className="single-box">
             <div className="singleItem">
                 {oneItem}
             </div>
-        </div>
             <Footer/>
+        </div>
         </>
     )
 }

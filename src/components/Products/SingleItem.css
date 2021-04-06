@@ -1,15 +1,41 @@
+.left-icon,
+.right-icon{
+    background-color: rgba(128, 128, 128, 0.1);
+    border-radius: 50%;
+    padding: 0.3rem;
+    position: absolute;
+    color: white;
+}
+
+.left-icon{
+    top: 50%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+}
+
+.right-icon{
+    top: 50%;
+    left: 83%;
+    transform: translate(-50%, -50%);
+}
+
 .singleItem{
-    margin: 2.5rem auto;
+    width: 70%;
+    margin: auto;
     padding-top: 3.5rem;
 }
 
 .itemImg{
-    width: 100%;
+    width: 80%;
     margin: 1.5rem auto;
+}
+
+.product-image{
+    text-align: center;
     position: relative;
 }
 
-.content{
+.content-detail{
     margin: 0.5rem 0;
 }
 
@@ -41,15 +67,16 @@
     font-weight: 500;
 }
 
-/*-- Responsive Area --*/
+.left-icon:hover,
+.right-icon:hover{
+    background-color: rgba(128, 128, 128, 0.8);
+}
+
+/***-- Responsive Area --***/
 
 @media screen and (max-width: 992px) {
     .size-chart{
         text-align: center;
-    }
-
-    .cart-Btn{
-        width: 100%;
     }
 
     .content{
@@ -61,12 +88,101 @@
         width: 100%;
         height: 200%;
     }
+
+    .left-icon{
+        position: absolute;
+        top: 50%;
+        left: 18%;
+        transform: translate(-50%, -50%);
+    }
+
+    .right-icon{
+        position: absolute;
+        top: 50%;
+        left: 82%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .itemImg{
+        width: 100%;
+    }
+
+    .cart-Btn{
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+
+    .left-icon{
+        left: 9%;
+    }
+
+    .right-icon{
+        left: 91%;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .left-icon{
+        left: 11%;
+    }
+
+    .right-icon{
+        left: 89%;
+    }
 }
 
 @media screen and (max-width: 570px){
     .size-image{
         margin: auto;
-        width: 100%;
         height: 100%;
+    }
+    .left-icon{
+        left: 8%;
+    }
+
+    .right-icon{
+        left: 92%;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .left-icon{
+        left: 10%;
+    }
+
+    .right-icon{
+        left: 90%;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .left-icon{
+        left: 11%;
+    }
+
+    .right-icon{
+        left: 89%;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .left-icon{
+        left: 12%;
+    }
+
+    .right-icon{
+        left: 88%;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .left-icon{
+        left: 15%;
+    }
+
+    .right-icon{
+        left: 85%;
     }
 }

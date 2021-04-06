@@ -19,12 +19,12 @@ const Header = ({status, userLogout}) => {
                         <li className="target1"><NavLink to="/men" className="hoverLink-bg">Mens</NavLink></li>
                         <li className="target2"><NavLink to="/women" className="hoverLink-bg">Womens</NavLink></li>
                         <li className="target3"><NavLink to="/location" className="hoverLink-bg">Location</NavLink></li>
-                        <li className="target4"><NavLink to="/cart" className="hoverLink-bg"><i className="material-icons">shopping_cart</i></NavLink></li>
                         {!status.auth.uid ?
-                        <li className="target5"><NavLink to="/signup" className="hoverLink-bg"><i className="material-icons left">account_circle</i></NavLink></li>
+                        <li className="target5"><NavLink to="/signup" className="hoverLink-bg">Sign In</NavLink></li>
                         :
-                        <li className="target5"><NavLink to="/" className="logout hoverLink-bg"><img src="./sign-out.png" alt="user-logout" className="log-out" onClick={() => userLogout()}/></NavLink></li>
+                        <li className="target5" onClick={() => userLogout()}><NavLink to="/" className="hoverLink-bg">Sign Out</NavLink></li>
                         }
+                        <li className="target4"><NavLink to="/cart" className="hoverLink-bg"><i className="material-icons">shopping_cart</i></NavLink></li>
                     </ul>
                 </div>
             </div>

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import {userSignUp} from './authAction';
-// import './SignIn.css';
 
 const SignUp = ({createUser, auth}) => {
     const [newUserInfo, setNewUserInfo] = useState({
@@ -27,7 +26,6 @@ const SignUp = ({createUser, auth}) => {
         }else{
             createUser(newUserInfo);
         }
-        console.log(newUserInfo);
     }
 
     return (

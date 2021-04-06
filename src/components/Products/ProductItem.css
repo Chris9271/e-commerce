@@ -1,0 +1,146 @@
+.product-box{
+    width: 16rem;
+    margin: 1.5rem 0 0 0;
+}
+
+.content-box{
+    width: 16rem;
+    height: 26rem;
+}
+
+.product-image{
+    height: 95%;
+}
+
+.adjust-size{
+    width: 100%;
+    height: 100%;
+}
+
+.product-price{
+    float: right;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5rem;
+}
+
+.product-title{
+    font-family: 'Crimson Text', serif;
+    font-size: 1.5rem;
+}
+
+/*** ---Responsive Area--- ***/
+@media screen and (max-width: 830px){
+    .content-box{
+        width: 17rem;
+        height: 26rem;
+    }
+
+    .product-box{
+        width: 17rem;
+    }
+
+    .product-price,
+    .product-title{
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .content-box,
+    .product-box{
+        width: 16rem;
+    }
+}
+
+@media screen and (max-width: 740px){
+    .content-box,
+    .product-box{
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .content-box{
+        width: 14rem;
+        height: 25rem;
+    }
+
+    .product-box{
+        width: 14rem;
+    }
+}
+
+@media screen and (max-width: 640px){
+    .content-box,
+    .product-box{
+        width: 13.5rem;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .content-box{
+        width: 11.5rem;
+        height: 23rem;
+    }
+
+    .product-box{
+        width: 11.5rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .content-box,
+    .product-box{
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .content-box,
+    .product-box{
+        width: 12rem;
+    }
+}
+
+@media screen and (max-width: 360px){
+    .content-box{
+        width: 11rem;
+        height: 20rem;
+    }
+
+    .product-box{
+        width: 11rem;
+    }
+}
+
+@media screen and (max-width: 320px){
+    .content-box{
+        width: 10rem;
+        height: 16rem;
+    }
+
+    .product-box{
+        width: 10rem;
+    }
+
+    .product-price,
+    .product-title{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .content-box{
+        width: 9rem;
+        height: 15rem;
+    }
+
+    .product-box{
+        width: 9rem;
+    }
+
+    .product-price,
+    .product-title{
+        font-size: 1rem;
+    }
+}

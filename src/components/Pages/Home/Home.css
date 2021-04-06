@@ -1,22 +1,29 @@
-.men-image,
-.women-image{
-    max-width: 100% !important;
-    height: auto !important;
-}
-
-img:hover{
-    opacity: 0.8;
-}
-
 .wrap-picture{
-    margin: 5.7rem auto;
-    padding-top: 3.7rem;
+    position: relative;
+    height: 70vh;
+}
+
+.home-pg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
 }
 
 .shopmen,
 .shopwomen{
     position: relative;
     text-align: center;
+}
+
+.men-image,
+.women-image{
+    max-width: 100%;
+}
+
+img:hover{
+    opacity: 0.8;
 }
 
 .men{
@@ -103,7 +110,8 @@ img:hover{
 
 
 /*-- Responsive Area --*/
-@media screen and (max-width: 1366px){
+
+@media screen and (max-width: 1100px){
     .men{
         font-size: 2.5rem;
     }
@@ -145,10 +153,33 @@ img:hover{
     }
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 830px){
+    .wrap-picture{
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .home-pg{
+        margin-top: 30rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .wrap-picture{
+        height: 100vh;
+    }
+
+    .home-pg{
+        margin-top: 1rem;
+    }
+
+    .shopmen{
+        margin-bottom: 0.5rem;
+    }
+
     .men,
     .women{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .menbtn1,
@@ -159,26 +190,38 @@ img:hover{
     }
 }
 
-@media screen and (max-width: 670px) {
-    .women{
-        font-size: 2.5rem;
+@media screen and (max-width: 740px) {
+    .wrap-picture{
+        width: 100%;
+        overflow-x: scroll;
+    }
+
+    .home-pg{
+        margin-top: 21rem;
     }
 }
 
-@media screen and (max-width: 550px) {
-    .men{
-        font-size: 2.5rem;
-    }
-
-    .menbtn1,
-    .menbtn2,
-    .womenbtn1,
-    .womenbtn2{
-        padding: 1rem;
+@media screen and (max-width: 640px) {
+    .home-pg{
+        margin-top: 18rem;
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
+    .home-pg{
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .home-pg{
+        margin-top: 2rem;
+    }
+
+    .wrap-picture{
+        height: 80vh;
+    }
+
     .men{
         font-size: 2rem;
     }
@@ -196,7 +239,11 @@ img:hover{
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 375px) {
+    .home-pg{
+        margin-top: 2rem;
+    }
+
     .men,
     .women{
         font-size: 1.6rem;
@@ -210,9 +257,9 @@ img:hover{
     }
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 320px) {
     .wrap-picture{
-        margin: 2rem 0;
+        height: 75vh;
     }
 
     .shopmen,
@@ -233,8 +280,12 @@ img:hover{
 }
 
 @media screen and (max-width: 280px) {
-    .men,
-    .women{
-        font-size: 1.3rem;
+    .wrap-picture{
+        height: 60vh;
+    }
+
+    .shopmen,
+    .shopwomen{
+        padding: 0 !important;
     }
 }

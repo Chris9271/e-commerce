@@ -1,89 +1,75 @@
 .mobileStyle{
-    width: 1000px;
-    height: 600px;
+    width: 100%;
+    height: 37.5rem;
+    margin-bottom: 3rem;
+}
+
+.markStyle{
+    color: white;
+    background-color: rgba(211, 211, 211, 0.5);
+    padding: 1rem 1.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
 }
 
 /*-- Responsive Area --*/
-@media screen and (max-width: 1200px){
-    .mobileStyle{
-        width: 50rem;
-        height: 38rem;
-    }
-}
 
 @media screen and (max-width: 830px){
     .mobileStyle{
-        width: 50rem;
-        height: 35rem;
+        width: 100%;
+        height: 20rem;
+        margin-bottom: 1.5rem;
     }
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 768px){
     .mobileStyle{
-        width: 48rem;
-        height: 48rem;
+        height: 40rem;
     }
 }
 
 @media screen and (max-width: 740px){
     .mobileStyle{
-        width: 45rem;
-        height: 35rem;
+        height: 22rem;
     }
 }
 
 @media screen and (max-width: 670px){
     .mobileStyle{
-        width: 39rem;
-        height: 35rem;
+        height: 19rem;
     }
 }
 
 @media screen and (max-width: 570px){
     .mobileStyle{
-        width: 37rem;
-        height: 35rem;
+        height: 17rem;
     }
 }
 
 @media screen and (max-width: 540px){
     .mobileStyle{
-        width: 35rem;
         height: 35rem;
     }
 }
 
-@media screen and (max-width: 420px){
+@media screen and (max-width: 425px){
     .mobileStyle{
-        width: 26.5rem;
-        height: 35rem;
+        height: 27rem;
     }
 }
 
 @media screen and (max-width: 375px){
     .mobileStyle{
-        width: 24.5rem;
-        height: 35rem;
-    }
-}
-
-@media screen and (max-width: 360px){
-    .mobileStyle{
-        width: 23.5rem;
-        height: 35rem;
+        height: 25rem;
     }
 }
 
 @media screen and (max-width: 320px){
     .mobileStyle{
-        width: 20.5rem;
-        height: 35rem;
-    }
-}
-
-@media screen and (max-width: 280px){
-    .mobileStyle{
-        width: 18rem;
-        height: 35rem;
+        height: 23rem;
     }
 }

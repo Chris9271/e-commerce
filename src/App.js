@@ -10,6 +10,8 @@ import SingleItem from './components/Products/SingleItem';
 import Cart from './components/Pages/Cart/Cart';
 import SignIn from './components/Pages/SignIn & SignUp/SignIn';
 
+import './App.css';
+
 const App = () =>{
   return (
     <BrowserRouter>

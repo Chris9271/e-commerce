@@ -10,11 +10,11 @@ const ProductList = (props) => {
         )
     }
     return (
-        <div className="row">
+        <>
             {props.items.map(item => (
                 <ProductItem key={item.id} {...item}/>
             ))}
-        </div>
+        </>
     )
 }
 

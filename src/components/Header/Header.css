@@ -1,5 +1,5 @@
 nav{
-    position: fixed;
+    position: sticky;
     top: 0;
     z-index: 999;
 }
@@ -17,30 +17,11 @@ nav{
     background-color: lightsteelblue;
 }
 
-.log-out{
-    margin-top: 1.5rem;
-    width: 20px;
-    height: 20px;
-}
-
-.logout{
-    height: 64px;
-}
-
 .hoverLink-bg:hover{
     background-color: rgba(0, 0, 0, 0);
 }
 
 /*-- Responsive Area --*/
-@media screen and (max-width: 670px){
-    .head-img{
-        width: 150px;
-    }
-
-    .right-container{
-        padding-right: 0px !important;
-    }
-}
 
 @media screen and (max-width: 570px) {
     .head-img{
@@ -85,18 +66,40 @@ nav{
 
     .target5{
         position: absolute;
-        top: 30%;
+        top: 29%;
         left: 85%;
         transform: translate(-50%, -50%);
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 425px) {
     .target4{
-        left: 75%;
+        left: 66%;
     }
 
     .target5{
-        left: 90%;
+        top: -15%;
+        left: 75%;
+        transform: translate(0%, 0%);
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .target4{
+        left: 73%;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    .head-img{
+        width: 150px;
+    }
+
+    .target4{
+        left: 70%;
+    }
+
+    .target5{
+        left: 73%;
     }
 }

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
 import './Cart.css';
 
 const Cart = ({cart, increase, decrease, removeItem}) => {
@@ -23,8 +24,11 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
 
     if(cart.length === 0){
         return(
-            <div className="row container center emptyCart">
-                <h5>You currently have no items in your shopping cart.</h5>
+            <div className="row center emptyCart">
+                <h5 className="empty-title">You don't have any item in shopping cart.</h5>
+                <Link to="/">
+                    <button className="go-home">Back To Home</button>
+                </Link>
             </div>
         )
     }
@@ -46,26 +50,15 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
             removeItem(item.id);
         }
 
-        const handleChange = () => {
-            item.quantity += 1
-        }
-
     return (
-        <div className="row container item-names" key={item.id}>
-            <div className="col s12 m5 item-detail">
+        <div className="item-names" key={item.id}>
+        <div className="item-detail">
                 <img src={item.image} alt={item.productName} className="item-image"/>
-                <div className="des-detail">
-                    <p className="product-name">{item.productName}</p>
-                    <label>Choose size</label>
-                    <select className="browser-default button-option">
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </select>
-                </div>
+            <div className="des-detail">
+                <p className="product-name">{item.productName}</p>
             </div>
-            <div className="col m3 item-quantity">
+        </div>
+            <div className="item-quantity">
                 {(item.quantity <= 1) ?
                     <button className="minus" onClick={handleMinusClick} disabled>-</button>
                     :
@@ -78,12 +71,10 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
                     <button className="plus" onClick={handleAddClick}>+</button>
                 }
             </div>
-            <div className="col m1"></div>
-            <div className="col m1 show-price">
-                <p>${(item.quantity === 1) ? Number(item.price).toFixed(2).toString() : (item.quantity * Number(item.price)).toFixed(2).toString()}</p>
+            <div className="price">
+                <p className="show-price">${(item.quantity === 1) ? Number(item.price).toFixed(2).toString() : (item.quantity * Number(item.price)).toFixed(2).toString()}</p>
             </div>
-            <div className="col m1"></div>
-            <div className="col m1">
+            <div className="remove-btn">
                 <button className="item-remove" onClick={handleRemoveClick}>X</button>
             </div>
         </div>
@@ -91,32 +82,24 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
 
     return(
         <div className="cart-wrapper">
-            <div className="row container item-name">
-                <div className="col s12 m5">
-                    <p>My Cart</p>
-                </div>
-                <div className="col m1">
-                    <p className="title">QUANTITY</p>
-                </div>
-                <div className="col m3"></div>
-                <div className="col m1">
-                    <p className="title">Price</p>
-                </div>
-                <div className="col m1"></div>
-                <div className="col m1">
-                    <p className="title">REMOVE</p>
-                </div>  
+            <div className="item-name">
+                <p className="first-title">My Cart</p>
+                <p className="second-title">QUANTITY</p>
+                <p className="third-title">Price</p>
+                <p className="fourth-title">REMOVE</p>
             </div>
                 {itemList} 
                 <div className="row">
-                    <div className="col s5 m7"></div>
-                    <div className="col s4 m2">
+                    <div className="col s5 m6"></div>
+                    <div className="col s4 m3 items4">
+                    {/* <div className="col s5 offset-s5 items5"> */}
                         <p>Item Total:</p>
                     </div>
-                    <div className="col s1 m1">
+                    <div className="col s3 m2 items3">
+                    {/* <div className="col s1"> */}
                         <p>${cartTotal.toFixed(2).toString()} </p>
                     </div>
-                    <div className="col s1 m1"></div>
+                    <div className="col m1"></div>
                 </div> 
         </div> 
     )

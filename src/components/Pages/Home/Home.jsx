@@ -5,10 +5,9 @@ import './Home.css';
 
 const Home = () => {
     return (
-        <>
-        {/* .container-fluid class provides a full width container */}
-        <div className="container-fluid wrap-picture">
-            <div className="row">
+        <div className="outside-box">
+        <div className="wrap-picture">
+            <div className="row home-pg">
             <div className="col s12 m12 l6 shopmen">
                 <img src="/men.jpeg" alt="" className="men-image"/>
                 <div className="men">SPRING 2021 LOOKBOOK</div>
@@ -32,7 +31,7 @@ const Home = () => {
             </div>
         </div>
         <Footer/>
-        </>
+        </div>
     )
 }
 

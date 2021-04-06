@@ -1,4 +1,36 @@
 .men-products{
-    margin: 2.5rem auto;
-    padding-top: 3.5rem;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 16rem 16rem 16rem 16rem;
+    margin: 0 auto;
+    grid-gap: 1.5rem;
 }
+
+/*** ---Responsive Area--- ***/
+@media screen and (max-width: 1200px){
+    .men-products{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .men-products{
+        width: 95%;
+        grid-gap: 1.3rem;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        overflow: scroll;
+    }
+}
+
+@media screen and (max-width: 670px){
+    .men-products{
+        grid-gap: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .men-products{
+        grid-template-columns: auto auto;
+    }
+} 

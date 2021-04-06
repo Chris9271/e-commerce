@@ -4,6 +4,11 @@
     margin: 1rem 0;
 }
 
+.footer-box{
+    margin-top: 3rem;
+    padding-bottom: 1.4rem;
+}
+
 li{
     padding: 0.1rem;
 }
@@ -18,5 +23,9 @@ li{
     .foot-img{
         visibility: hidden;
         position: absolute;
+    }
+
+    .footer-box{
+        margin-top: 1.5rem;
     }
 }

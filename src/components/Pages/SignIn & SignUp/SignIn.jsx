@@ -34,8 +34,8 @@ const SignIn = ({status, userLogin, auth, googleLogin, resetPassword}) => {
     if(status.auth.uid) return <Redirect to="/" />
 
     return (
-        <>
-        <div className="container join-wrapper">
+    <div className="outside-box">
+        <div className="join-wrapper">
             <div className="row container left-row">
                 <h4>SIGN IN</h4>
                 <form onSubmit={handleSubmit}>
@@ -49,7 +49,7 @@ const SignIn = ({status, userLogin, auth, googleLogin, resetPassword}) => {
                     {(auth) ? <span className="helper-text red-text" data-wrong={auth}>Email or Password is invalid</span> : null}
                 </div>
                 <p className="blue-text center forget-pwd" onClick={()=>resetPassword(email)}>Forget Your Password?</p>
-                <div>
+                <div className="btn-group">
                     <button className="signin-btn" type="submit">SIGN IN</button>
                     <button className="google-btn" onClick={(e)=>googleLogin(e.preventDefault())}>SIGN WITH GOOGLE</button>
                 </div>
@@ -57,8 +57,8 @@ const SignIn = ({status, userLogin, auth, googleLogin, resetPassword}) => {
             </div>
             <SignUp/>
         </div>
-            <Footer/>
-        </>
+        <Footer/>
+    </div>
     )
 }
 
