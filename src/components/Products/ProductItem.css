@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
+@font-face{
+    font-family: 'Crimson Text';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Crimson Text'), local('Crimson Text'),
+    url('../../font/CrimsonText-Italic.ttf') format('truetype');
+}
 
 .product-box{
     width: 16rem;
