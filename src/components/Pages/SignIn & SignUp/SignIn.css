@@ -1,7 +1,7 @@
 .join-wrapper{
     width: 70%;
     display: flex;
-    margin: 0 auto;
+    margin: 0 auto 2.7rem auto;
 }
 
 .left-row,
@@ -21,6 +21,7 @@ h4{
 .signin-btn,
 .google-btn{
     border-radius: 1rem;
+    border-color: black;
     padding: 1rem 1.5rem;
     margin: 1rem;
     cursor: pointer;

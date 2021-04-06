@@ -1,12 +1,6 @@
-.foot-img{
-    width: 200px;
-    height: 65px;
-    margin: 1rem 0;
-}
-
 .footer-box{
-    margin-top: 3rem;
-    padding-bottom: 1.4rem;
+    /* margin-top: 3rem; */
+    /* padding-bottom: 1.4rem; */
 }
 
 li{
@@ -18,14 +12,8 @@ li{
 }
 
 /*-- Responsive Area --*/
-
-@media screen and (max-width: 992px) {
-    .foot-img{
-        visibility: hidden;
-        position: absolute;
-    }
-
+@media screen and (max-width: 1200px){
     .footer-box{
-        margin-top: 1.5rem;
-    }
+        padding-bottom: 1.4rem;
+    }   
 }

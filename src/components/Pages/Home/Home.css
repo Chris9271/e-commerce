@@ -1,6 +1,8 @@
 .wrap-picture{
     position: relative;
     height: 70vh;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
 
 .home-pg{
@@ -111,7 +113,7 @@ img:hover{
 
 /*-- Responsive Area --*/
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1200px){
     .men{
         font-size: 2.5rem;
     }
@@ -151,28 +153,26 @@ img:hover{
         padding: 0.75rem 1rem;
         font-size: 1rem;
     }
-}
 
-@media screen and (max-width: 830px){
     .wrap-picture{
         width: 100%;
         overflow-x: scroll;
-    }
-
-    .home-pg{
-        margin-top: 30rem;
+        margin-top: 0;
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
     .wrap-picture{
         height: 100vh;
     }
 
     .home-pg{
+        height: 100vh;
         margin-top: 1rem;
     }
+}
 
+@media screen and (max-width: 768px){
     .shopmen{
         margin-bottom: 0.5rem;
     }
@@ -190,36 +190,13 @@ img:hover{
     }
 }
 
-@media screen and (max-width: 740px) {
-    .wrap-picture{
-        width: 100%;
-        overflow-x: scroll;
-    }
-
-    .home-pg{
-        margin-top: 21rem;
-    }
-}
-
-@media screen and (max-width: 640px) {
-    .home-pg{
-        margin-top: 18rem;
-    }
-}
-
-@media screen and (max-width: 540px) {
-    .home-pg{
-        margin-top: 2rem;
-    }
-}
-
 @media screen and (max-width: 425px) {
     .home-pg{
-        margin-top: 2rem;
+        height: 60vh;
     }
 
     .wrap-picture{
-        height: 80vh;
+        height: 70vh;
     }
 
     .men{
@@ -240,10 +217,6 @@ img:hover{
 }
 
 @media screen and (max-width: 375px) {
-    .home-pg{
-        margin-top: 2rem;
-    }
-
     .men,
     .women{
         font-size: 1.6rem;
@@ -258,8 +231,12 @@ img:hover{
 }
 
 @media screen and (max-width: 320px) {
+    .home-pg{
+        margin-top: 0;
+    }
+
     .wrap-picture{
-        height: 75vh;
+        height: 70vh;
     }
 
     .shopmen,
@@ -280,10 +257,6 @@ img:hover{
 }
 
 @media screen and (max-width: 280px) {
-    .wrap-picture{
-        height: 60vh;
-    }
-
     .shopmen,
     .shopwomen{
         padding: 0 !important;
