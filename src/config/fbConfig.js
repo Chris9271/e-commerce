@@ -5,10 +5,10 @@ import 'firebase/auth';
 
 var firebaseConfig = {
     //Firebase Config
-    apiKey: "AIzaSyCQSDRnO2Nm7qsV5DsBgW88x2WvT0WZnbg",
-    authDomain: "ecommerce-f4d40.firebaseapp.com",
+    apiKey: process.env.REACT_APP_API_KEY,
+    authDomain: process.env.REACT_APP_Auth_Domain,
     databaseURL: process.env.databaseURL,
-    projectId: "ecommerce-f4d40",
+    projectId: process.env.REACT_APP_Project_Id,
     storageBucket: process.env.FIREBASE_storageBucket,
     messagingSenderId: process.env.FIREBASE_messagingSenderId,
     appId: process.env.FIREBASE_appId
