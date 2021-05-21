@@ -9815,6 +9815,11 @@ react-scripts@4.0.0:
   optionalDependencies:
     fsevents "^2.1.3"
 
+react-stripe-checkout@^2.6.3:
+  version "2.6.3"
+  resolved "https://registry.yarnpkg.com/react-stripe-checkout/-/react-stripe-checkout-2.6.3.tgz#3173a870b04e5a3c321a06d24cd53c6030111c45"
+  integrity sha1-MXOocLBOWjwyGgbSTNU8YDARHEU=
+
 react-yup@^1.20.0:
   version "1.20.0"
   resolved "https://registry.yarnpkg.com/react-yup/-/react-yup-1.20.0.tgz#a55e44bdd199829a6b7902addf78a0a1d3c2b28f"

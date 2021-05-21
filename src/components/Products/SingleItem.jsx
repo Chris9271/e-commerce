@@ -65,8 +65,8 @@ const SingleItem = ({checkItem, addCart}) => {
                     :
                     <img src={item.hoverImage} alt="" className="itemImg"/>
                     }
-                    <i class="material-icons left-icon" onClick={handleLeftClick}>keyboard_arrow_left</i>
-                    <i class="material-icons right-icon" onClick={handleRightClick}>keyboard_arrow_right</i>
+                    <i className="material-icons left-icon" onClick={handleLeftClick}>keyboard_arrow_left</i>
+                    <i className="material-icons right-icon" onClick={handleRightClick}>keyboard_arrow_right</i>
                 </div>
                 <div className="col s12 m5 content-detail">
                     <h5>{item.productName}</h5>

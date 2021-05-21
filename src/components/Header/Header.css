@@ -9,13 +9,13 @@ nav{
     height: 65px;
 }
 
-.btn{
+/* .btn{
     background-color: lightslategrey;
 }
 
 .btn:hover{
     background-color: lightsteelblue;
-}
+} */
 
 .hoverLink-bg:hover{
     background-color: rgba(0, 0, 0, 0);

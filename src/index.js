@@ -46,7 +46,7 @@ const rrfProps = {
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* 將rrfProps透過provider傳遞給其他組件使用  ex:authAction */}
+    {/* 將rrfProps透過以上下文方式傳遞給其他組件使用  ex:authAction */}
     <ReactReduxFirebaseProvider {...rrfProps}> 
     <App />
     </ReactReduxFirebaseProvider>

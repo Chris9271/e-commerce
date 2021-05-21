@@ -16,5 +16,6 @@ var firebaseConfig = {
 
 //Initialize Firebase instance
 firebase.initializeApp(firebaseConfig)
-
+// Initialize Cloud Firestore through Firebase
+// firebase.firestore();
 export default firebase;

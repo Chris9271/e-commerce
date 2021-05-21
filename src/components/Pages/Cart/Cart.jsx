@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import Pay from './pay';
 import './Cart.css';
 
 const Cart = ({cart, increase, decrease, removeItem}) => {
 
     const [cartTotal, setCartTotal] = useState(0);
 
-    const total = () => {
-        let totalPrice = 0;
-        for(let i = 0; i < cart.length; i++){
-            if(cart.length > 0 && cart[i].quantity >= 1){
-                totalPrice += Number(cart[i].price * cart[i].quantity);
+    useEffect(() => {
+        const total = () => {
+            let totalPrice = 0;
+            for(let i = 0; i < cart.length; i++){
+                if(cart.length > 0 && cart[i].quantity >= 1){
+                    totalPrice += Number(cart[i].price * cart[i].quantity);
+                }
+                setCartTotal(totalPrice);
             }
-            setCartTotal(totalPrice);
         }
-    }
-
-        useEffect(() => {
             total();
-        }, [cart])
-    
+    }, [cart])
 
     if(cart.length === 0){
         return(
@@ -34,7 +33,6 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
     }
 
     let itemList = cart.map(item => {
-
         const handleMinusClick = (e) => {
             e.preventDefault();
             decrease(item.id);
@@ -92,15 +90,23 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
                 <div className="row">
                     <div className="col s5 m6"></div>
                     <div className="col s4 m3 items4">
-                    {/* <div className="col s5 offset-s5 items5"> */}
                         <p>Item Total:</p>
                     </div>
                     <div className="col s3 m2 items3">
-                    {/* <div className="col s1"> */}
                         <p>${cartTotal.toFixed(2).toString()} </p>
                     </div>
                     <div className="col m1"></div>
                 </div> 
+                <div className="row">
+                    <div className="col s12 m12 l12"></div>
+                </div>
+                <div className="row">
+                    <div className="col s8 m9"></div>
+                    <div className="col s3 m2">
+                        <Pay total={cartTotal.toFixed(2).toString()}/>
+                    </div>
+                    <div className="col m1"></div>
+                </div>
         </div> 
     )
 }

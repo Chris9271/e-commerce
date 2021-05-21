@@ -64,6 +64,12 @@ const cartReducer = (state = initState, action) => {
                     Cart: decreaseItem
                 };
 
+        case "Cart_Empty":
+            return{
+                ...state,
+                Cart: []
+            }
+
         default:
             return state;
     }
