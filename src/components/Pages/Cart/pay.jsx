@@ -4,7 +4,7 @@ import StripeCheckout from 'react-stripe-checkout';
 
 const Pay = ({clearCart, total}) => {
 
-    const publishKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
+    const publishKey = process.env.REACT_APP_STRIPE_PUBLIC_API_KEY;
 
     const Total = total * 100;
     // Token return client info like ip, card detail, email... etc or return error
