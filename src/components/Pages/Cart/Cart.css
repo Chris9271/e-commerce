@@ -113,6 +113,18 @@ button:focus{
     background-color: rgba(255,255,255, 0);
 }
 
+.ipt-msg{
+    color:red;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.ipt-msgg{
+    color:red;
+    font-size: 16px;
+    font-weight: 600;
+}
+
 /*-- Responsive Area --*/
 @media screen and (max-width: 840px){
     .cart-wrapper{

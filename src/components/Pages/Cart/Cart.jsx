@@ -101,6 +101,15 @@ const Cart = ({cart, increase, decrease, removeItem}) => {
                     <div className="col s12 m12 l12"></div>
                 </div>
                 <div className="row">
+                    <div className="col s3 m3 l3"></div>
+                    <div className="col s6 m6 l6">
+                        <div className="ipt-msg">Please using the following test credit card for payment</div>
+                        <div className="ipt-msgg">4242 4242 4242 4242 - Exp Date: 04/26 - CVV: 426</div>
+                    </div>
+                    <div className="col s3 m3 l3"></div>
+                </div>
+                <div className="col s12 m12 l12"></div>
+                <div className="row">
                     <div className="col s8 m9"></div>
                     <div className="col s3 m2">
                         <Pay total={cartTotal.toFixed(2).toString()}/>
